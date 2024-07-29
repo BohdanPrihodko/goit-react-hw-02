@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import "./App.css";
 import Description from "./components/Description/Description"
 import Options from "./components/Options/Options"
+import Notification from './components/Notification/Notification';
 import Feedback from "./components/Feedback/Feedback"
 
 
@@ -41,7 +42,6 @@ function App() {
   
   return (
     <section>
-      <h1>Sip Happens Café</h1>
       <Description message="Please leave your feedback about our service by selecting one of the options below." />
       <Options
         onFeedback={updateFeedback}
@@ -55,7 +55,7 @@ function App() {
           positiveFeedbackPercent={positiveFeedbackPercent}
         />
       ) : (
-        <Description message="No feedback yet" />
+        <Notification message="No feedback yet" />
       )}
     </section>
   );

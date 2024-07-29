@@ -1,5 +1,10 @@
 const Description = ({ message }) => {
-  return <div><p>{message}</p></div>;
+  return (
+    <div>
+      <h1>Sip Happens Café</h1>
+      <p>{message}</p>
+    </div>
+  );
 };
 
 export default Description;
